@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+.logo{
+    margin-left: 590px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-style: italic;
+}
+.logo1{
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  transition: 0.5s;
+  z-index: 2;
+}
+
+.showcase .bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+
+.text{
+    position: relative;
+    z-index: 10;
+    text-align: right;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  mix-blend-mode: overlay;
+}
+
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text h3{
+    font-size: 4em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    margin-left: 600px;
+}
+
+a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-decoration: uppercase;
+    letter-spacing: 2px;
+    transition: all .4s;
+    border-radius: 5px;
+}
+
+a:hover{
+    letter-spacing: 6px;
+    background: gray;
+    color: #fff;
+}
+
+.social{
+    position: absolute;
+    bottom: 230px;
+    left: 1080px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+.social li{
+    list-style: none;
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    cursor: pointer;
+    transform: scale(0.7);
+    transition: .5s;
+}
+
+.social li:hover{
+    transform:  translateY(-15px);
+}
+
+.container2{
+    max-width: 700px;
+    margin: 20px auto;
+}
+
+.container2 .heading{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.container2 .acordionwrapper{
+    padding: 0 20px;
+}
+
+.container2 .acordion{
+    margin: 20px;
+    cursor: pointer;
+    width: 700px;
+}
+
+.container2 .acordion.active .acordionheading{
+    background-color: lightgray;
+    color: purple;
+}
+
+.container2 .acordion.active .acordionheading img {
+    color: #fff;
+    transform: rotate(180deg);
+    transition: .3s;
+}
+
+.container2 .acordion.active .acordiontext{
+    display: block;
+}
+
+.container2 .acordionheading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background: white;
+    border: 2px solid #333;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.container2 .acordionheading h3{
+    font-size: 20px;
+}
+
+.container2 .acordiontext{
+    padding: 15px 20px;
+    border: 2px solid #333;
+    font-size: 15px;
+    background-color: #fff;
+    border-top: 0;
+    display: none;
+    animation: animate 0.3s linear backwards;
+    line-height: 2;
+    transform-origin: top;
+}
+
+
+@keyframes animate {
+    0%{
+        transform: scaleY(0);
+    }
+}
+
+.accs{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section1{
+    margin-top: 50px;
+    margin-bottom: 45px;
+    margin-left: 150px;
+    transition: .3s;
+}
+.section1:hover{
+    transform: translateY(-15px)
+}
+
+.section2{
+    margin-right: 150px;
+}
+
+
+    </style>
+    
+    
+
+    <section class="showcase">
+        <header>
+            <img src="IMAGES/logo.png" width="140" height="26" alt="" class="logo">
+        </header>
+        <img class="bg" src="images/back.jpg" alt="">
+        <div class="overlay"></div>
+        <div class="text" id="nextpage">
+            <h2>lorem ipsum new</h2>
+            <h3>Ipsum ipsum new</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corporis similique repudiandae maxime. Et labore deleniti minima in rem! Modi illum adipisci fugiat praesentium voluptatibus eaque ducimus cum, assumenda voluptates!.</p>
+            <a href="#nextpage">Написать</a>
+        </div>
+        
+    
+    
+        <ul class="social">
+            <li><img src="images/facebook.png" height="30px" alt=""></li>
+            <li><img src="images/whatsapp.png" height="30px" alt=""></li>
+            <li><img src="images/instagram.png" height="30px" alt=""></li>
+        </ul>
+    </section>
+
+
+    <section>
+        
+    </section>
+</body>
+</html>
